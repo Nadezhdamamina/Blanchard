@@ -15,13 +15,9 @@
 
       observer: true,
       observeParents: true,
-      // slidesPerView: 3,
-      // slidesPerGroup: 3,
-      // spaceBetween: 50,
       slidesPerView: 1,
       slidesPerGroup: 1,
       spaceBetween: 10,
-      // autoHeight: true,
       speed: 800,
       ally: false,
       keyboard: true,
@@ -37,20 +33,12 @@
       },
 
       breakpoints: {
-        // 300: {
-        //   slidesPerView: 1,
-        //   slidesPerGroup: 1,
-        //   spaceBetween: 10,
-
-        // },
-
-        // 421: {
-        //   slidesPerView: 2,
-
-        //   spaceBetween: 20,
-
-        // },
         610: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          spaceBetween: 38,
+        },
+        970: {
           slidesPerView: 2,
           slidesPerGroup: 2,
           spaceBetween: 34,
@@ -64,9 +52,9 @@
     });
 
     const doingSlider = new Swiper('.doing__slider', {
-      slidesPerView: 3,
-      slidesPerGroup: 3,
-      spaceBetween: 50,
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 10,
       speed: 800,
 
       navigation: {
@@ -79,11 +67,6 @@
       },
 
       breakpoints: {
-        220: {
-          slidesPerView: 1,
-          spaceBetween: 10,
-
-        },
         511: {
           slidesPerView: 2,
           spaceBetween: 34,
@@ -172,25 +155,44 @@
   };
   accordionInit();
 
-  ymaps.ready(init);
+  ymaps.ready(initMap);
 
-  function init() {
+  function initMap() {
     const myMap = new ymaps.Map("map", {
-      center: [55.76, 37.60],
-      zoom: 14
-    });
-
-    // Создание геообъекта с типом точка (метка).
-    const myGeoObject = new ymaps.GeoObject({
-      geometry: {
-        type: "Point", // тип геометрии - точка
-        coordinates: [55.76, 37.60]
-
+      center: [55.75846806898367, 37.60108849999989],
+      zoom: 14,
+      controls: ['geolocationControl', 'zoomControl']
+    }, {
+      suppressMapOpenBlock: true,
+      geolocationControlSize: "large",
+      geolocationControlPosition: {
+        top: "300px",
+        right: "20px"
+      },
+      geolocationControlFloat: 'none',
+      zoomControlSize: "small",
+      zoomControlFloat: "none",
+      zoomControlPosition: {
+        top: "200px",
+        right: "20px"
       }
     });
 
-    // Размещение геообъекта на карте.
+    myMap.behaviors.disable('scrollZoom');
+    myMap.container.fitToViewport();
+
+    // Создание геообъекта с типом точка (метка).
+    const myGeoObject = new ymaps.Placemark(
+      [55.75846806898367, 37.60108849999989], {}, {
+        iconLayout: "default#image",
+        iconImageHref: "../img/myGeoObject.svg",
+        iconImageSize: [20, 20],
+        iconImageOffset: [-10, -10],
+      }
+    );
+
     myMap.geoObjects.add(myGeoObject);
+
   }
 
   const multiTippy = () => {

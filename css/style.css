@@ -1675,9 +1675,10 @@ img, svg {
 }
 
 .contacts__content {
+  width: 100%;
   justify-content: space-between;
   align-items: center;
-  
+  /* flex-wrap: nowrap; */
 }
 
 .contacts__address {
@@ -1717,7 +1718,7 @@ img, svg {
 
 .contacts-form__input {
   width: 100%;
-  padding: 8px 0 8px 24px;
+  padding: 8px 24px;
   font-weight: 400;
   font-size: 16px;
   line-height: 32px;
@@ -1777,6 +1778,16 @@ img, svg {
   margin-right: 21px;
 }
 
+.footer__top {
+  height: 700px;
+
+}
+
+.map-block {
+  width: 100%;
+  height: 700px;
+}
+
 .footer-social__item:not(:last-child) {
   margin-right: 20px;
 }
@@ -1795,10 +1806,10 @@ img, svg {
   filter: grayscale(1);
 }
 
-[class*="normal-layout"],
+/* [class*="normal-layout"],
 [class*="map-copyrights-promo"],
 [class*="toolbar_right"],
-[class*="controls__control"],
+[class*="controls__control"], */
 [class*="copyright__agreement"] {
   display: none;
 }
@@ -1850,6 +1861,10 @@ img, svg {
 @media (max-width: 1280px) {
   .container {
     padding: 0 50px;
+  }
+
+  [class*="controls__control"] {
+    display: none;
   }
 
   .header__top {
@@ -1973,8 +1988,11 @@ img, svg {
     max-width: 658px;
   }
 
+  .hero__tittle {
+    margin-bottom: 10px;
+  }
+
   .hero__descr {
-    margin-top: 10px;
     margin-bottom: 132px;
   }
 
@@ -2190,10 +2208,11 @@ img, svg {
 
   .block-select {
     max-width: 281px;
+    margin-bottom: 39px;
   }
 
   .gallery-left__checkbox {
-    margin-top: 39px;
+    
   }
 
   .slider-gallery {
@@ -2222,7 +2241,7 @@ img, svg {
   }
 
   .catalog__descr {
-    margin-bottom: 18px;
+    margin-bottom: 22px;
   }
 
   .accordion-content__list {
@@ -2308,7 +2327,7 @@ img, svg {
   }
 
   .header__top {
-    padding: 11px 0;
+    padding: 11px 0 12px 0;
   }
 
   .burger {
@@ -2408,7 +2427,7 @@ img, svg {
   .hero {
     margin: 0 auto;
     max-width: 90%;
-    padding: 34px 0 45px 0;
+    padding: 33px 0 45px 0;
     text-align: center;
   }
 
@@ -2433,15 +2452,19 @@ img, svg {
   }
 
   .info {
-    padding: 50px 0 40px 0;
+    padding: 50px 0 41px 0;
   }
 
   .catalog {
-    padding: 49px 0 52px 0;
+    padding: 51px 0 52px 0;
   }
 
   .catalog__descr {
     display: none;
+  }
+
+  .accordion-content__wrap {
+    padding: 20px 0;
   }
 
   .accordion-content__list {
@@ -2476,18 +2499,23 @@ img, svg {
 
   .contacts-form__label {
     width: 100%;
+    margin: 10px 0;
   }
 
   .contacts-form__input {
-    padding: 2px 0 2px 23px;
+    padding: 3px 0 3px 23px;
   }
   
   .form-name {
     margin-right: 0;
   }
 
-  .map-block {
-    height: 320px !important;
+  .footer__top {
+    height: 320px;
+  }
+
+  .footer__map {
+    height: 320px;
   }
 
   .footer__bottom {
@@ -2529,20 +2557,16 @@ img, svg {
   }  
 
   .gallery {
-    padding: 50px 0;
+    padding: 50px 0 20px 0;
   }
   
-  .gallery-swiper {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-
   .gallery-left__content {
     margin-right: 0;
   }
 
   .block-select {
     max-width: none;
+    margin-bottom: 29px;
   }
 
   .block-select__text {
@@ -2550,35 +2574,29 @@ img, svg {
   }
 
   .gallery-left__checkbox {
-    margin-top: 29px;
-    margin-bottom: 0;
+    margin-bottom: 30px;
   }
   
   .gallery-right {
     align-self: center;
   }
 
-  .slider-gallery {
-    padding-top: 30px;
-  }
-
-  .slider-gallery {
+  .slider-gallery__slider {
     display:flex;
     flex-direction: column-reverse;
+
   }
 
-  .button-gallery__pagination {
-    margin: 0 19px;
+  .slider-gallery__slide {
+    margin-bottom: 20px;
   }
-  
+
   .slider-gallery__slide::before {
     padding-top: calc(367 / 290 * 100% - 6px);
   } 
 
   .slider-gallery__button {
     align-self: center;
-    margin-top: 19px;
-    margin-bottom: 0;
   }
 
   .catalog__painter-info,
@@ -2597,11 +2615,15 @@ img, svg {
   }
 
   .catalog__data-info {
-    margin: 14px 0 5px 0;
+    margin: 14px 0 7px 0;
   }
 
   .doing-item__body {
-    padding: 18px 25px 47px 22px;
+    padding: 18px 25px 48px 22px;
+  }
+
+  .doing-item__link {
+    padding-left: 6px;
   }
 
   .data-info {
@@ -2655,7 +2677,7 @@ img, svg {
   }
 
   .contacts__address {
-    margin: 4px 0 8px 0;
+    margin: 4px 0 6px 0;
   }
 
   .contacts__subtitle {
@@ -2702,7 +2724,7 @@ img, svg {
   .contacts-social-img {
     width: 50px;
   }
-}
+} 
 
 @keyframes dropdownOpen {
   from {
