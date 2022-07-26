@@ -385,6 +385,7 @@ img, svg {
 .header__link {
   margin-right: -6px;
   padding: 0 6px;
+  line-height: 1;
   transition: color .3s ease;
 }
 
@@ -576,6 +577,7 @@ img, svg {
 
 .header__dropdown.is-active {
   display: block;
+  margin-bottom: -22px;
   animation-name: dropdownOpen;
   animation-duration: 0.4s;
 }
