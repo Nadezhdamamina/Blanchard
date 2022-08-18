@@ -1774,6 +1774,7 @@ body {
 }
 
 .contacts-form__label {
+  position: relative;
   width: 29.8%;
   display: flex;
   flex-direction:column-reverse;
@@ -1788,11 +1789,14 @@ body {
   font-size: 16px;
   line-height: 32px;
   border-radius: 100px;
+  outline: none;
   border: 1px solid #333333;
   transition: background-color .3s ease;
 }
 
 .just-validate-error-label {
+  position: absolute;
+  top: -16px;
   margin-left: 20px;
   font-weight: 400;
   font-size: 12px;
