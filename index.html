@@ -437,29 +437,31 @@
             на&nbsp;независимые элементы.
           </p>
           <div class="catalog__choice flex">
-            <div class="catalog__painter-info js-tab-content is-active" id="painter-info"
-              data-painter-content="domenico">
-              <picture>
-                <img class="catalog__img-artist" src="../img/artist.jpg" alt="#">
-              </picture>
-              <h3 class="subtitle catalog__subtitle">Доменико Гирландайо</h3>
-              <p class="catalog__data-info data-info">2 июня 1448 — 11 января 1494.</p>
-              <p class="catalog__text text-catalog">Один из&nbsp;ведущих флорентийских художников Кватроченто,
-                основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо. Глава
-                художественной мастерской, где юный Микеланджело в&nbsp;течение года овладевал профессиональными
-                навыками. Автор фресковых циклов, в&nbsp;которых выпукло, со&nbsp;всевозможными подробностями показана
-                домашняя жизнь библейских персонажей (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции
-                в&nbsp;костюмах того времени).</p>
-            </div>
-            <div class="catalog__painter-info js-tab-content" data-painter-content="none-painer">
-              <picture>
-                <img class="catalog__img-none" src="../img/gallery/artist_none.jpg" alt="Картина Доменико Гирландайо">
-              </picture>
-              <h3 class="subtitle catalog__subtitle">Что мы о нём знаем?</h3>
-              <p class="catalog__text catalog__text-none text-catalog">Пока ничего... Зато мы точно знаем, что в галерее
-                есть на что
-                посмотреть!</p>
-              <a class="catalog__content-none-link" href="#myGallery">В галерею</a>
+            <div class="catalog__painter-block js-tab-content" id="painter-info">
+              <div class="catalog__painter-info js-tab-content is-active" data-painter-content="domenico">
+                <picture>
+                  <img class="catalog__img-artist" src="../img/artist.jpg" alt="#">
+                </picture>
+                <h3 class="subtitle catalog__subtitle">Доменико Гирландайо</h3>
+                <p class="catalog__data-info data-info">2 июня 1448 — 11 января 1494.</p>
+                <p class="catalog__text text-catalog">Один из&nbsp;ведущих флорентийских художников Кватроченто,
+                  основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо. Глава
+                  художественной мастерской, где юный Микеланджело в&nbsp;течение года овладевал профессиональными
+                  навыками. Автор фресковых циклов, в&nbsp;которых выпукло, со&nbsp;всевозможными подробностями показана
+                  домашняя жизнь библейских персонажей (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции
+                  в&nbsp;костюмах того времени).</p>
+              </div>
+              <div class="catalog__painter-info js-tab-content" data-painter-content="none-painer">
+                <picture>
+                  <img class="catalog__img-none" src="../img/gallery/artist_none.jpg" alt="Картина Доменико Гирландайо">
+                </picture>
+                <h3 class="subtitle catalog__subtitle">Что мы о нём знаем?</h3>
+                <p class="catalog__text catalog__text-none text-catalog">Пока ничего... Зато мы точно знаем, что в
+                  галерее
+                  есть на что
+                  посмотреть!</p>
+                <a class="catalog__content-none-link" href="#myGallery">В галерею</a>
+              </div>
             </div>
             <div class="catalog__painters accordion js-accordion-container">
               <div class="accordion__item ac js-enabled">
@@ -505,8 +507,9 @@
                       <li class="accordion-content__item"><a class="accordion-content__link js-tab-btn js-scroll-link"
                           href="#painter-info" data-painter-btn="none-painer">
                           Андреа Верроккьо</a></li>
-                      <li class="accordion-content__item"><a class="accordion-content__link js-tab-btn tab-active"
-                          href="#painter-info" data-painter-btn="domenico">
+                      <li class="accordion-content__item"><a
+                          class="accordion-content__link js-tab-btn js-scroll-link tab-active" href="#painter-info"
+                          data-painter-btn="domenico">
                           Доменико Гирландайо</a></li>
                       <li class="accordion-content__item"><a class="accordion-content__link js-tab-btn js-scroll-link"
                           href="#painter-info" data-painter-btn="none-painer">
