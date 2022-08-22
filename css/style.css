@@ -47,6 +47,8 @@
 
 :root {
   --black-color: #000;
+  --grey_light-color: #ECECEC;
+  --grey_middle-color: #CACACA;
   --grey-color: #999999;
   --dark-grey-color: #666666;
   --main-color: #FFFFFF;
@@ -174,7 +176,7 @@ body {
 .button-circle {
   width: 30px;
   height: 30px;
-  background-color: #ECECEC;
+  background-color: var(--grey_light-color);
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -1113,6 +1115,15 @@ body {
   background-color: var(--violet_dark-color);
 }
 
+.button-gallery__btn:disabled {
+  background-color: var(--grey_light-color);
+  
+}
+
+.button-gallery__btn:disabled::before{
+  border-color: var(--grey_middle-color);
+}
+
 .button-gallery__pagination {
   text-align: center;
   margin: 0 19px;
@@ -1228,7 +1239,7 @@ body {
 }
 
 .accordion__item:first-child .accordion__range {
-  border-top: 1px solid #cacaca;
+  border-top: 1px solid var(--grey_middle-color);
 }
 
 .accordion__range {
@@ -1238,7 +1249,7 @@ body {
   margin-bottom: 0;
   margin-top: -1px;
   border-top: 1px solid transparent;
-  border-bottom: 1px solid #cacaca;
+  border-bottom: 1px solid var(--grey_middle-color);
   border-right: none;
   border-left: none;
   font-size: 24px;
@@ -1345,7 +1356,7 @@ body {
 .is-active .accordion-content,
 .is-active .accordion-content-none {
   visibility: visible;
-  border-color: #cacaca;
+  border-color: var(--grey_middle-color);
 }
 
 .accordion-content__wrap,
@@ -1461,7 +1472,7 @@ body {
   padding: 15px 50px 40px 49px;
   min-height: 400px;
   box-sizing: border-box;
-  border: 1px solid #CACACA;
+  border: 1px solid var(--grey_middle-color);
   border-top: none;
 }
 
@@ -1515,7 +1526,7 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: #ECECEC;
+  background: var(--grey_light-color);
 }
 
 .doing__slider .swiper-button-next::after {
@@ -1669,7 +1680,7 @@ body {
   box-sizing:border-box;
   padding: 27px;
   height: 150px;
-  border: 1px solid #CACACA; 
+  border: 1px solid var(--grey_middle-color);
 }
 
 .partners-cart__img {
@@ -1724,7 +1735,7 @@ body {
 /* contacts ==================================================== */
 
 .contacts {
-  border: 1px solid #CACACA;
+  border: 1px solid var(--grey_middle-color);
 }
 
 .contacts__content {
