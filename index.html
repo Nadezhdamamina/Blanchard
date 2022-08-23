@@ -371,7 +371,8 @@
                   aria-label="К следующему слайду"></button>
               </div>
               <div class="slider-gallery__wrapper swiper-wrapper">
-                <a class="slider-gallery__slide slide-gallery swiper-slide" href="#" aria-label="Слайд 1">
+                <a class="slider-gallery__slide slide-gallery swiper-slide" data-path="first" data-animation="fadeInUp"
+                  data-speed="700" aria-label="Слайд 1">
                   <picture>
                     <source srcset="img/gallery/1-320.jpg" media="(max-width: 420px)">
                     <source srcset="img/gallery/1-768.jpg" media="(max-width: 970px)">
@@ -379,7 +380,7 @@
                     <img class="slide-gallery__img" src="img/gallery/1-1920.jpg" alt="Картина">
                   </picture>
                 </a>
-                <a class="slider-gallery__slide slide-gallery swiper-slide" href="#" aria-label="Слайд 2">
+                <a class="slider-gallery__slide slide-gallery swiper-slide" aria-label="Слайд 2">
                   <picture>
                     <source srcset="img/gallery/2-320.jpg" media="(max-width: 420px)">
                     <source srcset="img/gallery/2-768.jpg" media="(max-width: 768px)">
@@ -387,7 +388,7 @@
                     <img class="slide-gallery__img" src="img/gallery/2-1920.jpg" alt="Картина">
                   </picture>
                 </a>
-                <a class="slider-gallery__slide slide-gallery swiper-slide" href="#" aria-label="Слайд 3">
+                <a class="slider-gallery__slide slide-gallery swiper-slide" aria-label="Слайд 3">
                   <picture>
                     <source srcset="img/gallery/3-320.jpg" media="(max-width: 420px)">
                     <source srcset="img/gallery/3-768.jpg" media="(max-width: 768px)">
@@ -395,7 +396,7 @@
                     <img class="slide-gallery__img" src="img/gallery/3-1920.jpg" alt="Картина">
                   </picture>
                 </a>
-                <a class="slider-gallery__slide slide-gallery swiper-slide" href="#" aria-label="Слайд 4">
+                <a class="slider-gallery__slide slide-gallery swiper-slide" aria-label="Слайд 4">
                   <picture>
                     <source srcset="img/gallery/4-320.jpg" media="(max-width: 420px)">
                     <source srcset="img/gallery/4-768.jpg" media="(max-width: 768px)">
@@ -403,7 +404,7 @@
                     <img class="slide-gallery__img" src="img/gallery/4-1920.jpg" alt="Картина">
                   </picture>
                 </a>
-                <a class="slider-gallery__slide slide-gallery swiper-slide" href="#" aria-label="Слайд 5">
+                <a class="slider-gallery__slide slide-gallery swiper-slide" aria-label="Слайд 5">
                   <picture>
                     <source srcset="img/gallery/5-320.jpg" media="(max-width: 420px)">
                     <source srcset="img/gallery/5-768.jpg" media="(max-width: 768px)">
@@ -411,7 +412,7 @@
                     <img class="slide-gallery__img" src="img/gallery/5-1920.jpg" alt="Картина">
                   </picture>
                 </a>
-                <a class="slider-gallery__slide slide-gallery swiper-slide" href="#" aria-label="Слайд 6">
+                <a class="slider-gallery__slide slide-gallery swiper-slide" aria-label="Слайд 6">
                   <picture>
                     <source srcset="img/gallery/6-768.jpg" media="(max-width: 420px)">
                     <source srcset="img/gallery/6-768.jpg" media="(max-width: 768px)">
@@ -422,6 +423,43 @@
               </div>
             </div>
           </div>
+
+          <div class="popup" data-target="first">
+            <div class="popup__container">
+              <button class="popup__close">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z"
+                    fill="black" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z"
+                    fill="black" />
+                </svg>
+              </button>
+              <div class="popup__content flex">
+                <div class="popup__img-block">
+                  <picture>
+                    <source srcset="img/gallery/1popup-320.jpg" media="(max-width: 610px)">
+                    <source srcset="img/gallery/1popup-768.jpg" media="(max-width: 970px)">
+                    <source srcset="img/gallery/1popup-1024.jpg" media="(max-width: 1280px)">
+                    <img class="popup__img" src="img/gallery/1popup-1920.jpg" alt="Картина «Женщина с граблями»">
+                  </picture>
+                </div>
+
+                <div class="popup__text">
+
+                  <h3 class="popup__subtitle subtitle">Казимир Малевич</h3>
+                  <h4 class="popup__painting-name">«Женщина с граблями»</h4>
+                  <p class="popup__data-info data-info">1931–1932</p>
+                  <p class="popup__descr descr">Картина из&nbsp;второй серии крестьянского цикла работ Казимира
+                    Малевича. Художник
+                    принялся за&nbsp;её&nbsp;создание в&nbsp;1930&ndash;1931&nbsp;годах, после того, как первый цикл был
+                    утерян после Берлинской и&nbsp;Варшавской выставок в&nbsp;1927&nbsp;году.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -440,7 +478,7 @@
             <div class="catalog__painter-block js-tab-content" id="painter-info">
               <div class="catalog__painter-info js-tab-content is-active" data-painter-content="domenico">
                 <picture>
-                  <img class="catalog__img-artist" src="../img/artist.jpg" alt="#">
+                  <img class="catalog__img-artist" src="img/artist.jpg" alt="Картина Доменико Гирландайо">
                 </picture>
                 <h3 class="subtitle catalog__subtitle">Доменико Гирландайо</h3>
                 <p class="catalog__data-info data-info">2 июня 1448 — 11 января 1494.</p>
@@ -453,7 +491,7 @@
               </div>
               <div class="catalog__painter-info js-tab-content" data-painter-content="none-painer">
                 <picture>
-                  <img class="catalog__img-none" src="../img/gallery/artist_none.jpg" alt="Картина Доменико Гирландайо">
+                  <img class="catalog__img-none" src="img/artist_none.jpg" alt="Тут должна быть картина">
                 </picture>
                 <h3 class="subtitle catalog__subtitle">Что мы о нём знаем?</h3>
                 <p class="catalog__text catalog__text-none text-catalog">Пока ничего... Зато мы точно знаем, что в
