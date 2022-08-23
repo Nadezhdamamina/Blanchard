@@ -218,6 +218,7 @@ body {
 }
 
 .header__container {
+  position: relative;
   justify-content: space-between;
 }
 
@@ -454,9 +455,9 @@ body {
 .header__search {
   position: absolute;
   /* width: calc(251 / 1920 * 100%); */
-  width: 247px;
-  bottom: 0;
-  right: 60px;
+  width: 255px;
+  bottom: -29px;
+  right: 44px;
   flex-wrap: nowrap;
   color: var(--main-color);
   transform: translateY(calc(100% + 26px));
@@ -511,7 +512,7 @@ body {
   border: none;
   background-color: transparent;
   color:inherit;
-  margin-right: 9px;
+  margin-right: 7px;
 }
 
 .header__search:hover:not(:active) svg {
