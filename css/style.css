@@ -1202,7 +1202,7 @@ body {
 .popup__container {
   position: relative;
   max-width: 900px;
-  min-height: 500px;
+  height: 500px;
   margin: 50px auto;
   display: inline-block;
   vertical-align: middle;
@@ -2162,7 +2162,7 @@ body {
 
   .popup__container {
     max-width: 594px;
-    min-height: 594px;
+    height: 594px;
   }
 
   .catalog__painter-info {
@@ -2703,6 +2703,7 @@ body {
 
   .popup__container {
     max-width: 290px;
+    height: 600px;
   }
 
   .popup__content {

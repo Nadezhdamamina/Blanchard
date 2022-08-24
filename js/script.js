@@ -366,6 +366,8 @@
           }
         }.bind(this));
 
+
+
         this.popup.addEventListener("click", function (e) {
           if (!e.target.classList.contains('popup__container') && !e.target.closest('.popup__container') && this.isOpen) {
             this.close();
@@ -472,7 +474,7 @@
   }
   const popup = new Popup({
     isOpen: (popup) => {
-      console.log(popup);
+
       console.log('popup');
     }
   });
