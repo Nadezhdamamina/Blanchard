@@ -32,11 +32,11 @@ try {
 
   $mail->Host       = 'smtp.rambler.ru'; // SMTP сервера почты
   $mail->Username   = 'nadezhdamamina@rambler.ru'
-  $mail->Password   = ''; // заполнить
+  $mail->Password   = 'zmmtyrxzonqrnxge'; // заполнить
   $mail->SMTPSecure = 'ssl';
   $mail->Port       = 465;
 
-  $mail->setFrom('', 'Заявка с вашего сайта'); // Адрес самой почты и имя отправителя
+  $mail->setFrom('nadezhdamamina@rambler.ru', 'Заявка с вашего сайта'); // Адрес самой почты и имя отправителя
 
   // Получатель письма
   $mail->addAddress('nadezhdamamina@rambler.ru');

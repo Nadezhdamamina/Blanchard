@@ -339,6 +339,8 @@
           if (clickedElement) {
             let target = clickedElement.dataset.path;
             let animation = clickedElement.dataset.animation;
+            this._reOpen = false;
+            this._nextContainer = false;
             let speed = clickedElement.dataset.speed;
             this.animation = animation ? animation : 'fade';
             this.speed = speed ? parseInt(speed) : 300;
@@ -366,33 +368,37 @@
           }
         }.bind(this));
 
-
-
-        this.popup.addEventListener("click", function (e) {
-          if (!e.target.classList.contains('popup__container') && !e.target.closest('.popup__container') && this.isOpen) {
+        document.addEventListener('click', function (e) {
+          if (e.target.classList.contains('popup') && e.target.classList.contains("is-open")) {
             this.close();
           }
         }.bind(this));
       }
     }
 
-    open() {
+    open(selector) {
       this.previousActiveElement = document.activeElement;
+  
       this.popup.style.setProperty('--transition-time', `${this.speed / 1000}s`);
       this.popup.classList.add('is-open');
+  
+      document.body.style.scrollBehavior = 'auto';
+      document.documentElement.style.scrollBehavior = 'auto';
+  
       this.disableScroll();
-
+  
       this.popupContainer.classList.add('popup__open');
       this.popupContainer.classList.add(this.animation);
-
+  
       setTimeout(() => {
-        this.popupContainer.classList.add('animate-open');
         this.options.isOpen(this);
+        this.popupContainer.classList.add('animate-open');
         this.isOpen = true;
         this.focusTrap();
       }, this.speed);
     }
-    close(selectorValue) {
+
+    close() {
       if (this.popupContainer) {
         this.popupContainer.classList.remove('animate-open');
         this.popupContainer.classList.remove(this.animation);
