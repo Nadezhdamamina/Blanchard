@@ -243,6 +243,7 @@
           errorMessage: 'Укажите 11 цифр после +',
         },
       ]).onSuccess((event) => {
+        console.log(event);
         let formData = new FormData(event.target);
 
         let xhr = new XMLHttpRequest();

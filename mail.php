@@ -5,6 +5,7 @@ require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 
 $title = "Тема письма";
+// $file = $__FILES['file'];
 
 $c = true;
 //Формирование самого письма
@@ -31,8 +32,8 @@ try {
   $mail->SMTPAuth = true;
 
   $mail->Host       = 'smtp.rambler.ru'; // SMTP сервера почты
-  $mail->Username   = 'nadezhdamamina@rambler.ru'
-  $mail->Password   = 'zmmtyrxzonqrnxge'; // заполнить
+  $mail->Username   = 'nadezhdamamina@rambler.ru';
+  $mail->Password   = 'TL5g7X94i2'; // заполнить
   $mail->SMTPSecure = 'ssl';
   $mail->Port       = 465;
 
