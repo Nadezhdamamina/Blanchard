@@ -1145,8 +1145,8 @@ body {
 }
 
 .button-gallery__btn:disabled {
-  background-color: var(--grey_light-color);
-
+  /* background-color: var(--grey_light-color); 
+  opacity: 0.4;*/
 }
 
 .button-gallery__btn:disabled::before {
@@ -1539,7 +1539,7 @@ body {
 
 .accordion-content__wrap,
 .accordion-content-none__wrap {
-  padding: 26px 0;
+  padding: 26px 0 57px 0;
 }
 
 .accordion-content__list {
