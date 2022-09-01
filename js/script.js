@@ -21,6 +21,11 @@
       speed: 800,
       ally: false,
       keyboard: true,
+      a11y: {
+        prevSlideMessage: 'К предыдущему слайду',
+        nextSlideMessage: 'К следующему слайду',
+      },
+      containerMessage: 'Слайдер галереи',
 
       pagination: {
         el: '.button-gallery__pagination',
