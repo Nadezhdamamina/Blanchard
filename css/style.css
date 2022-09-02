@@ -1145,8 +1145,7 @@ body {
 }
 
 .button-gallery__btn:disabled {
-  /* background-color: var(--grey_light-color); 
-  opacity: 0.4;*/
+  opacity: 0.4;
 }
 
 .button-gallery__btn:disabled::before {
@@ -1992,7 +1991,7 @@ body {
   border-radius: 100px;
   outline: none;
   border: 1px solid #333333;
-  transition: background-color .3s ease;
+  transition: background-color var(--transition-time) ease;
 }
 
 .just-validate-error-label {
@@ -2054,15 +2053,14 @@ body {
 
 .footer__top {
   height: 700px;
-
 }
 
 .footer-social__item:not(:last-child) {
   margin-right: 20px;
 }
 
-.contacts-social-img {
-  transition: opacity .3s ease;
+.social__link svg {
+  transition: opacity var(--transition-time) ease;
 }
 
 .social__link:focus:not(:active) svg,
@@ -2113,8 +2111,8 @@ body {
   margin-right: 20px;
 }
 
-.footer-social__link {
-  transition: fill .3s ease;
+.footer-social__link path {
+  transition: fill var(--transition-time) ease;
 }
 
 .footer-social__link:focus path,
