@@ -70,7 +70,7 @@
   --violet_middle-color: #9D5CD0;
   --violet_dark-color: #7943A4;
 
-  --transition-time: .9s;
+  --transition-time: .5s;
 }
 
 body {
@@ -159,7 +159,7 @@ body {
   border: 2px solid var(--violet_light-color);
   border-radius: inherit;
   opacity: 0;
-  transition: opacity .3s ease;
+  transition: opacity var(--transition-time) ease;
 }
 
 .btn:focus {
@@ -268,7 +268,7 @@ body {
   height: 3px;
   background-color: var(--main-color);
   transform-origin: left;
-  transition: background-color .3s ease;
+  transition: background-color var(--transition-time) ease;
 }
 
 .burger::before {
@@ -364,7 +364,7 @@ body {
   color: inherit;
   text-decoration: none;
   transition-property: color;
-  transition: color .3s ease;
+  transition: color var(--transition-time) ease;
 }
 
 .header__enter {
@@ -377,7 +377,7 @@ body {
   color: inherit;
   text-decoration: none;
   transition-property: color;
-  transition: color .3s ease;
+  transition: color var(--transition-time) ease;
 }
 
 .header__enter-svg {
@@ -478,12 +478,12 @@ body {
 .header__search.is-opened {
   display: flex;
   animation-name: search-open;
-  animation-duration: .3s;
+  animation-duration: var(--transition-time);
 }
 
 .header__search.is-closed {
   animation-name: search-close;
-  animation-duration: .3s;
+  animation-duration: var(--transition-time);
 }
 
 .header__search-btn--open,
@@ -511,7 +511,7 @@ body {
   border: none;
   border-bottom: 1px solid var(--main-color);
   background: transparent;
-  transition: border-color .3s ease;
+  transition: border-color var(--transition-time) ease;
 }
 
 .header__search::-ms-clear {
@@ -710,7 +710,7 @@ body {
 
 .header__bottom-link-text {
   position: relative;
-  transition: color .3s ease;
+  transition: color var(--transition-time) ease;
 }
 
 
@@ -812,7 +812,7 @@ body {
   color: var(--main-color);
   text-decoration: none;
   transition-property: color;
-  transition: box-shadow .3s ease;
+  transition: box-shadow var(--transition-time) ease;
 }
 
 .hero__link:hover {
@@ -978,7 +978,7 @@ body {
   box-sizing: border-box;
   border: 1px solid;
   vertical-align: middle;
-  transition: border-color .3s ease;
+  transition: border-color var(--transition-time) ease;
 }
 
 .checkbox-label__span::before {
@@ -1247,7 +1247,6 @@ body {
   outline: none;
   background: none;
   cursor: pointer;
-
 }
 
 .popup__close:focus path,
@@ -1260,12 +1259,9 @@ body {
 }
 
 .popup__content {
-  /* flex-grow: 1; */
   flex-wrap: nowrap;
   height: 100%;
 }
-
-.popup__img-block {}
 
 .popup__img {
   display: block;
@@ -1275,7 +1271,6 @@ body {
 .popup__img-none {
   max-width: 400px;
   height: 100%;
-  /* object-fit: none; */
 }
 
 .popup__text {
@@ -1341,8 +1336,6 @@ body {
   transform: translateY(0);
   transition: transform var(--transition-time), opacity var(--transition-time);
 }
-
-
 
 /* catalog ===========================================================================================*/
 
@@ -1503,7 +1496,6 @@ body {
 .catalog__content-none-link:active:not(:focus) {
   color: var(--violet_dark-color);
   border-bottom: 1px solid var(--violet_dark-color);
-  /* transition: color var(--transition-time) ease; */
 }
 
 .accordion__range:hover {
@@ -1578,7 +1570,6 @@ body {
   margin-right: 36px;
   box-sizing: border-box;
   background: #B7B7B7;
-
 }
 
 .accordion-content-none__img::before {
@@ -1592,7 +1583,6 @@ body {
 }
 
 .accordion-content-none__title {
-
   margin: 0;
   margin-bottom: 9px;
   font-weight: 600;
@@ -1601,7 +1591,6 @@ body {
 }
 
 .accordion-content-none__text {
-
   margin: 0;
   margin-bottom: 9px;
   font-weight: 400;
@@ -1620,8 +1609,6 @@ body {
   outline: none;
   transform: border-color var(--transition-time);
 }
-
-
 
 /* doing =========================================================================== */
 
@@ -1681,8 +1668,6 @@ body {
   outline: none;
 }
 
-
-
 .doing-link__text {
   padding-bottom: 2px;
   border-bottom: 1px solid var(--violet_middle-color);
@@ -1696,7 +1681,6 @@ body {
 
 .doing-item__link:hover:not(:focus):not(:active) {
   color: var(--violet_dark-color);
-
 }
 
 .doing-item__link:active .doing-link__text {
@@ -1819,10 +1803,8 @@ body {
 }
 
 .partners__link {
-  /* padding: 0 5px; */
   color: var(--violet_middle-color);
   text-decoration: none;
-  /* transition-property: color; */
   transition: background-color var(--transition-time) ease, color var(--transition-time) ease;
 }
 
@@ -1843,7 +1825,6 @@ body {
 .accordion-content-none__link:active {
   color: var(--violet_dark-color);
   border-bottom: 1px solid var(--violet_dark-color);
-  /* transition: none; */
 }
 
 .partners__slider-container {
@@ -1925,7 +1906,6 @@ body {
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  /* flex-wrap: nowrap; */
 }
 
 .contacts__address {
@@ -1952,13 +1932,6 @@ body {
 .footer-social__link,
 .footer-social__link svg {
   outline: none;
-}
-
-
-
-.contacts__social {
-  /* margin: 30px 0; */
-
 }
 
 .contacts__form {
@@ -2026,13 +1999,12 @@ body {
   color: var(--violet_middle-color);
   border: 2px solid var(--violet_middle-color);
   border-radius: 100px;
-  transition: background-color .3s ease, color .3s ease;
+  transition: background-color var(--transition-time) ease, color var(--transition-time) ease;
 }
 
 .form-btn:hover {
   background-color: var(--violet_middle-color);
   color: var(--main-color);
-  /* box-shadow: inset 0 0 0 3px var(--violet_ultra-light-color); */
 }
 
 .form-btn:active {
@@ -2043,7 +2015,6 @@ body {
 
 .social__subtitle {
   margin-bottom: 6px;
-  /* box-sizing:border-box; */
 }
 
 .social__item:not(:last-child) {
@@ -2070,7 +2041,6 @@ body {
 
 .social__link:active svg {
   box-shadow: inset 0 0 0 3px var(--violet_dark-color);
-  /* border: 2px solid var(--violet_dark-color); */
   border-radius: 50%;
   opacity: 1;
 }
@@ -2414,7 +2384,7 @@ body {
   }
 
   .header__search-btn--open {
-    transition: opacity .3s ease;
+    transition: opacity var(--transition-time) ease;
   }
 
   .header__search-btn--close {
@@ -2430,7 +2400,6 @@ body {
   .header__search-input::placeholder {
     opacity: 0;
   }
-
 }
 
 @media (max-width: 970px) {
@@ -3244,11 +3213,11 @@ body {
 /* @keyframes popupOpen {
   from {
     opacity: 0;
-    transition: opacity .3s;
+    transition: opacity var(--transition-time);
   }
 
   to {
       opacity: 1;
-      transition: opacity .3s;
+      transition: opacity var(--transition-time);
   } 
 }*/

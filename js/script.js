@@ -248,7 +248,6 @@
           errorMessage: 'Укажите 11 цифр после +',
         },
       ]).onSuccess((event) => {
-        console.log(event);
         let formData = new FormData(event.target);
 
         let xhr = new XMLHttpRequest();
@@ -290,8 +289,7 @@
       const href = link.getAttribute('href').substring(1);
       const scrollTarget = document.getElementById(href);
       const elementPosition = scrollTarget.getBoundingClientRect().top;
-      console.log(elementPosition);
-
+      
       window.scrollBy({
         top: elementPosition,
         behavior: 'smooth'
@@ -339,9 +337,10 @@
     }
 
     eventsPopup() {
+      this.popup = document.querySelector('.popup');
       if (this.popup) {
         document.addEventListener("click", function (e) {
-          const clickedElement = e.target.closest('[data-path]');
+          const clickedElement = e.target.closest('.slide-gallery');
           if (clickedElement) {
             let target = clickedElement.dataset.path;
             let animation = clickedElement.dataset.animation;
