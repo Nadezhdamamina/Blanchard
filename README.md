@@ -15,3 +15,4 @@
 </div>
 :woman_technologist: About Me :
 I am a beginner :seedling: Frontend Developer from Russia Kaliningrad.
+<p>Educational project: https://nadezhdamamina.github.io/Blanchard/</p>
